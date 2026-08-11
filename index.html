@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerta! Golpes Virtuais</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fa-solid fa-triangle-exclamation logo-icon"></i>
+                <div class="logo-text">
+                    <span class="logo-title">ALERTA!</span>
+                    <span class="logo-subtitle">GOLPES VIRTUAIS</span>
+                </div>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Abrir menu de navegação">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link active">Início</a></li>
+                    <li><a href="#golpes" class="nav-link">Tipos de Golpes</a></li>
+                    <li><a href="#proteger" class="nav-link">Como se Proteger</a></li>
+                    <li><a href="#dicas" class="nav-link">Dicas Rápidas</a></li>
+                    <li><a href="#saiba-mais" class="nav-link">Saiba Mais</a></li>
+                </ul>
+                <a href="#ajuda" class="btn-help-header">
+                    <i class="fa-regular fa-square-check"></i> Em dúvida? Peça ajuda
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Hero -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>FIQUE ATENTO.<br>PROTEJA VOCÊ E SEUS DADOS.</h1>
+                    <p>Golpistas estão cada vez mais criativos. Informação é a sua melhor proteção.</p>
+                    <a href="#proteger" class="btn-primary">
+                        <i class="fa-solid fa-check"></i> Saiba como se proteger
+                    </a>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <!-- Imagem conceitual utilizando Unsplash focado em segurança digital e hacker -->
+                        <img src="https://unsplash.com" alt="Ilustração de segurança cibernética e proteção de dados digitais" class="hero-img">
+                        <!-- Elementos flutuantes simulando os ícones vetoriais do protótipo -->
+                        <div class="floating-badge badge-warning"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <div class="floating-badge badge-blue"><i class="fa-solid fa-comment-dots"></i></div>
+                        <div class="floating-badge badge-lock"><i class="fa-solid fa-lock"></i></div>
+                        <div class="floating-badge badge-mail"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="floating-badge badge-danger"><i class="fa-solid fa-circle-exclamation"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Tipos de Golpes -->
+        <section id="golpes" class="grid-section">
+            <div class="section-container">
+                <h2 class="section-title">FIQUE ATENTO A ESTES GOLPES:</h2>
+                
+                <div class="cards-grid">
+                    <div class="card-item">
+                        <div class="card-icon-wrapper circle-blue">
+                            <i class="fa-solid fa-comment-dollar"></i>
+                        </div>
+                        <h3>FALSOS PRÊMIOS</h3>
+                        <p>Promessas de prêmios fáceis para obter seus dados.</p>
+                        <a href="#" class="card-link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="card-item">
+                        <div class="card-icon-wrapper circle-yellow">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <h3>FALSAS LOJAS</h3>
+                        <p>Ofertas muito boas que escondem sites fraudulentos.</p>
+                        <a href="#" class="card-link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="card-item">
+                        <div class="card-icon-wrapper circle-teal">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <h3>CLONAGEM DE WHATSAPP</h3>
+                        <p>Golpistas se passam por você para pedir dinheiro a seus contatos.</p>
+                        <a href="#" class="card-link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="card-item">
+                        <div class="card-icon-wrapper circle-orange">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <h3>E-MAILS E MENSAGENS SUSPEITAS</h3>
+                        <p>Links e anexos podem roubar seus dados.</p>
+                        <a href="#" class="card-link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="card-item">
+                        <div class="card-icon-wrapper circle-darkblue">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h3>OUTROS GOLPES</h3>
+                        <p>Fique atento a novas tentativas de fraude que surgem todos os dias.</p>
+                        <a href="#" class="card-link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Como se Proteger -->
+        <section id="proteger" class="protection-section">
+            <div class="section-container">
+                <h2 class="section-title">COMO SE PROTEGER:</h2>
+                
+                <div class="protection-layout">
+                    <div class="protection-grid">
+                        <div class="protection-item">
+                            <div class="protect-icon"><i class="fa-solid fa-user-lock"></i></div>
+                            <p>Não compartilhe senhas ou dados pessoais.</p>
+                        </div>
+                        <div class="protection-item">
+                            <div class="protect-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <p>Desconfie de ofertas muito vantajosas.</p>
+                        </div>
+                        <div class="protection-item">
+                            <div class="protect-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <p>Verifique sempre a origem de links e sites.</p>
+                        </div>
+                        <div class="protection-item">
+                            <div class="protect-icon"><i class="fa-solid fa-users-gear"></i></div>
+                            <p>Ative a verificação em duas etapas sempre que possível.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Lateral de Ajuda -->
+                    <div id="ajuda" class="side-help-card">
+                        <div class="help-header">
+                            <div class="help-circle-check">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h3>EM DÚVIDA?</h3>
+                                <p>Não clique, não responda e consulte alguém de confiança.</p>
+                            </div>
+                        </div>
+                        <button class="btn-cta-help" id="btnOpenModal">Peça ajuda</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner de Atenção Intermediário -->
+        <section class="attention-banner">
+            <div class="banner-container">
+                <div class="banner-icon-alert">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div class="banner-text">
+                    <h2>SEGURANÇA COMEÇA COM <span>ATENÇÃO!</span></h2>
+                    <p>Previna-se. Compartilhe essa informação.</p>
+                </div>
+                <div class="banner-icon-megaphone">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column brand-column">
+                <div class="logo font-light">
+                    <i class="fa-solid fa-triangle-exclamation logo-icon"></i>
+                    <div class="logo-text">
+                        <span class="logo-title">ALERTA!</span>
+                        <span class="logo-subtitle">GOLPES VIRTUAIS</span>
+                    </div>
+                </div>
+                <p class="footer-desc">Informação é a melhor forma de prevenção. Fique atento e ajude a proteger mais pessoas.</p>

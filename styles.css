@@ -1,0 +1,413 @@
+### `styles.css`
+
+```css
+/* ==========================================================================
+   VARIÁVEIS DE AMBIENTE (:root) - Paleta Extraída Fielmente da Imagem
+   ========================================================================== */
+:root {
+    --color-primary-dark: #00122c;   /* Azul escuro profundo do fundo hero/footer */
+    --color-primary-light: #0d2c54;  /* Azul navy intermediário */
+    --color-accent-yellow: #fca311;  /* Amarelo vivo dos alertas e destaque secundário */
+    --color-accent-blue: #1d4ed8;    /* Azul royal dos CTAs principais */
+    --color-text-dark: #1e293b;      /* Cinza escuro para legibilidade de texto corrida */
+    --color-text-muted: #64748b;    /* Cinza médio para descritivos de cards */
+    --color-bg-light: #f8fafc;       /* Fundo cinza ultraclaro das seções secundárias */
+    --color-white: #ffffff;          
+    --color-danger: #ef4444;         /* Vermelho de erro/alerta pontual */
+    
+    --font-main: 'Montserrat', sans-serif;
+    --max-width: 1200px;
+    --transition-smooth: all 0.3s ease;
+}
+
+/* ==========================================================================
+   RESETS E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text-dark);
+    background-color: var(--color-white);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: var(--font-main);
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: var(--transition-smooth);
+}
+
+/* ==========================================================================
+   CABEÇALHO (HEADER)
+   ========================================================================== */
+.main-header {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid var(--color-accent-yellow);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilização do Logo Corporativo de Alerta */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icon {
+    font-size: 2.2rem;
+    color: var(--color-accent-yellow);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.logo-subtitle {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--color-accent-yellow);
+    letter-spacing: 0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1.25rem;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.5rem 0.25rem;
+    opacity: 0.85;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    opacity: 1;
+    color: var(--color-accent-yellow);
+}
+
+/* Indicador visual abaixo do link ativo */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent-yellow);
+    transition: var(--transition-smooth);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* Botão Superior Direito */
+.btn-help-header {
+    background-color: var(--color-accent-yellow);
+    color: var(--color-primary-dark);
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-help-header:hover {
+    background-color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   SEÇÃO HERO (HERO SECTION)
+   ========================================================================== */
+.hero-section {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: 10rem 1.5rem 6rem 1.5rem; /* Compensando o header fixo */
+    position: relative;
+}
+
+.hero-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--color-accent-yellow);
+    color: var(--color-primary-dark);
+    padding: 0.9rem 2rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(252, 163, 17, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Área da Ilustração e Badges Flutuantes */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+}
+
+.hero-img {
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    border: 3px solid rgba(255,255,255,0.1);
+}
+
+.floating-badge {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    animation: floating 4s ease-in-out infinite;
+}
+
+/* Variação de posicionamentos e cores baseado no mockup */
+.badge-warning { background-color: var(--color-accent-yellow); top: -15px; left: -15px; animation-delay: 0s; }
+.badge-blue { background-color: #3b82f6; top: 40%; left: -30px; animation-delay: 0.5s; }
+.badge-lock { background-color: #10b981; top: 10%; right: -20px; animation-delay: 1s; }
+.badge-mail { background-color: #f97316; bottom: 30%; right: -25px; animation-delay: 1.5s; }
+.badge-danger { background-color: var(--color-danger); bottom: -10px; left: 40%; animation-delay: 2s; }
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ==========================================================================
+   ESTILOS DE SEÇÃO REUTILIZÁVEIS
+   ========================================================================== */
+.section-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    margin-bottom: 3.5rem;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   GRID: TIPOS DE GOLPES
+   ========================================================================== */
+.grid-section {
+    background-color: var(--color-white);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+}
+
+.card-item {
+    background: var(--color-white);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(13, 44, 84, 0.08);
+    border-color: #cbd5e1;
+}
+
+.card-icon-wrapper {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Cores de ícones em círculos específicos do mockup */
+.circle-blue { background-color: #eff6ff; color: #2563eb; }
+.circle-yellow { background-color: #fef9c3; color: #ca8a04; }
+.circle-teal { background-color: #f0fdfa; color: #0d9488; }
+.circle-orange { background-color: #fff7ed; color: #ea580c; }
+.circle-darkblue { background-color: #e0f2fe; color: #0369a1; }
+
+.card-item h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-bottom: 1rem;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.card-item p {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.card-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-accent-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.card-item:hover .card-link {
+    color: var(--color-primary-dark);
+}
+
+/* ==========================================================================
+   COMO SE PROTEGER & SEÇÃO LATERAL
+   ========================================================================== */
+.protection-section {
+    background-color: var(--color-bg-light);
+}
+
+.protection-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.protection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.protection-item {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #edf2f7;
+}
+
+.protect-icon {
+    font-size: 2.2rem;
+    color: var(--color-accent-blue);
