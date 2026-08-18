@@ -3,195 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alerta! Golpes Virtuais</title>
-    <!-- Google Fonts -->
+    <title>Alerta: Golpes Virtuais - Proteja seus Dados</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome para Ícones -->
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <!-- CSS Customizado -->
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="header-container">
-            <div class="logo">
-                <i class="fa-solid fa-triangle-exclamation logo-icon"></i>
-                <div class="logo-text">
-                    <span class="logo-title">ALERTA!</span>
-                    <span class="logo-subtitle">GOLPES VIRTUAIS</span>
-                </div>
-            </div>
-            
-            <button class="menu-toggle" aria-label="Abrir menu de navegação">
-                <i class="fa-solid fa-bars"></i>
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="alert-icon">⚠️</span> SEGURANÇA DIGITAL
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                <span class="hamburger"></span>
             </button>
-
-            <nav class="nav-menu">
+            <nav class="nav" aria-label="Navegação principal">
                 <ul class="nav-list">
-                    <li><a href="#inicio" class="nav-link active">Início</a></li>
-                    <li><a href="#golpes" class="nav-link">Tipos de Golpes</a></li>
-                    <li><a href="#proteger" class="nav-link">Como se Proteger</a></li>
-                    <li><a href="#dicas" class="nav-link">Dicas Rápidas</a></li>
-                    <li><a href="#saiba-mais" class="nav-link">Saiba Mais</a></li>
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#golpes" class="nav-link">Os Golpes</a></li>
+                    <li><a href="#protecao" class="nav-link">Como se Proteger</a></li>
+                    <li><a href="#simulador" class="nav-link">Simulador</a></li>
                 </ul>
-                <a href="#ajuda" class="btn-help-header">
-                    <i class="fa-regular fa-square-check"></i> Em dúvida? Peça ajuda
-                </a>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Seção Hero -->
-        <section id="inicio" class="hero-section">
-            <div class="hero-container">
+        <section id="home" class="hero">
+            <div class="container hero-container">
                 <div class="hero-content">
-                    <h1>FIQUE ATENTO.<br>PROTEJA VOCÊ E SEUS DADOS.</h1>
-                    <p>Golpistas estão cada vez mais criativos. Informação é a sua melhor proteção.</p>
-                    <a href="#proteger" class="btn-primary">
-                        <i class="fa-solid fa-check"></i> Saiba como se proteger
-                    </a>
+                    <span class="badge">Atenção Máxima</span>
+                    <h1>Fique Atento.<br>Proteja você e seus dados.</h1>
+                    <p class="hero-lead">Em dúvida? Não clique, não responda e consulte alguém de confiança. A segurança na internet começa com a sua atenção.</p>
+                    <div class="hero-cta-group">
+                        <a href="#protecao" class="btn btn-primary">Aprenda a se Proteger</a>
+                        <a href="#golpes" class="btn btn-secondary">Conhecer os Golpes</a>
+                    </div>
                 </div>
-                <div class="hero-visual">
-                    <div class="hero-image-wrapper">
-                        <!-- Imagem conceitual utilizando Unsplash focado em segurança digital e hacker -->
-                        <img src="https://unsplash.com" alt="Ilustração de segurança cibernética e proteção de dados digitais" class="hero-img">
-                        <!-- Elementos flutuantes simulando os ícones vetoriais do protótipo -->
-                        <div class="floating-badge badge-warning"><i class="fa-solid fa-triangle-exclamation"></i></div>
-                        <div class="floating-badge badge-blue"><i class="fa-solid fa-comment-dots"></i></div>
-                        <div class="floating-badge badge-lock"><i class="fa-solid fa-lock"></i></div>
-                        <div class="floating-badge badge-mail"><i class="fa-solid fa-envelope"></i></div>
-                        <div class="floating-badge badge-danger"><i class="fa-solid fa-circle-exclamation"></i></div>
+                <div class="hero-image">
+                    <img src="https://unsplash.com" alt="Pessoa analisando dados de segurança em um smartphone protegido">
+                </div>
+            </div>
+        </section>
+
+        <section id="golpes" class="golpes-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Fique atento a estes golpes</h2>
+                    <p>Conheça as táticas mais comuns utilizadas por criminosos virtuais para enganar você.</p>
+                </div>
+                <div class="grid-layout">
+                    <div class="card">
+                        <div class="card-icon">🎁</div>
+                        <h3>Falsos Prêmios</h3>
+                        <p>Promessas de prêmios fáceis e vantagens absurdas servem de isca para obter seus dados pessoais e bancários.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🛒</div>
+                        <h3>Falsas Lojas</h3>
+                        <p>Ofertas muito boas que escondem sites fraudulentos. Você compra o produto, mas ele nunca chega.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">💬</div>
+                        <h3>Clonagem de WhatsApp</h3>
+                        <p>Golpistas se passam por você através do aplicativo de mensagens para pedir dinheiro urgente a seus contatos.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📩</div>
+                        <h3>E-mails e Mensagens Suspeitas</h3>
+                        <p>Links falsos e anexos maliciosos criados especificamente para roubar suas senhas e invadir suas contas.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção Tipos de Golpes -->
-        <section id="golpes" class="grid-section">
-            <div class="section-container">
-                <h2 class="section-title">FIQUE ATENTO A ESTES GOLPES:</h2>
-                
-                <div class="cards-grid">
-                    <div class="card-item">
-                        <div class="card-icon-wrapper circle-blue">
-                            <i class="fa-solid fa-comment-dollar"></i>
-                        </div>
-                        <h3>FALSOS PRÊMIOS</h3>
-                        <p>Promessas de prêmios fáceis para obter seus dados.</p>
-                        <a href="#" class="card-link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-
-                    <div class="card-item">
-                        <div class="card-icon-wrapper circle-yellow">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                        <h3>FALSAS LOJAS</h3>
-                        <p>Ofertas muito boas que escondem sites fraudulentos.</p>
-                        <a href="#" class="card-link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-
-                    <div class="card-item">
-                        <div class="card-icon-wrapper circle-teal">
-                            <i class="fa-solid fa-phone-volume"></i>
-                        </div>
-                        <h3>CLONAGEM DE WHATSAPP</h3>
-                        <p>Golpistas se passam por você para pedir dinheiro a seus contatos.</p>
-                        <a href="#" class="card-link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-
-                    <div class="card-item">
-                        <div class="card-icon-wrapper circle-orange">
-                            <i class="fa-solid fa-envelope-open-text"></i>
-                        </div>
-                        <h3>E-MAILS E MENSAGENS SUSPEITAS</h3>
-                        <p>Links e anexos podem roubar seus dados.</p>
-                        <a href="#" class="card-link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-
-                    <div class="card-item">
-                        <div class="card-icon-wrapper circle-darkblue">
-                            <i class="fa-solid fa-user-shield"></i>
-                        </div>
-                        <h3>OUTROS GOLPES</h3>
-                        <p>Fique atento a novas tentativas de fraude que surgem todos os dias.</p>
-                        <a href="#" class="card-link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+        <section id="protecao" class="protecao-section">
+            <div class="container protecao-container">
+                <div class="protecao-image">
+                    <img src="https://unsplash.com" alt="Cadeado digital representando proteção de dados e criptografia">
                 </div>
-            </div>
-        </section>
-
-        <!-- Seção Como se Proteger -->
-        <section id="proteger" class="protection-section">
-            <div class="section-container">
-                <h2 class="section-title">COMO SE PROTEGER:</h2>
-                
-                <div class="protection-layout">
-                    <div class="protection-grid">
-                        <div class="protection-item">
-                            <div class="protect-icon"><i class="fa-solid fa-user-lock"></i></div>
-                            <p>Não compartilhe senhas ou dados pessoais.</p>
-                        </div>
-                        <div class="protection-item">
-                            <div class="protect-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                            <p>Desconfie de ofertas muito vantajosas.</p>
-                        </div>
-                        <div class="protection-item">
-                            <div class="protect-icon"><i class="fa-solid fa-circle-check"></i></div>
-                            <p>Verifique sempre a origem de links e sites.</p>
-                        </div>
-                        <div class="protection-item">
-                            <div class="protect-icon"><i class="fa-solid fa-users-gear"></i></div>
-                            <p>Ative a verificação em duas etapas sempre que possível.</p>
-                        </div>
-                    </div>
-
-                    <!-- Card Lateral de Ajuda -->
-                    <div id="ajuda" class="side-help-card">
-                        <div class="help-header">
-                            <div class="help-circle-check">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
+                <div class="protecao-content">
+                    <h2>Como se proteger no ambiente virtual</h2>
+                    <p class="section-sub">Adote hábitos simples que bloqueiam a maioria dos ataques virtuais de forma imediata.</p>
+                    <ul class="protection-list">
+                        <li>
+                            <span class="list-bullet">✓</span>
                             <div>
-                                <h3>EM DÚVIDA?</h3>
-                                <p>Não clique, não responda e consulte alguém de confiança.</p>
+                                <strong>Não compartilhe dados:</strong> Nunca informe senhas, códigos SMS de validação ou dados pessoais por mensagens.
                             </div>
-                        </div>
-                        <button class="btn-cta-help" id="btnOpenModal">Peça ajuda</button>
-                    </div>
+                        </li>
+                        <li>
+                            <span class="list-bullet">✓</span>
+                            <div>
+                                <strong>Desconfie de vantagens:</strong> Se uma oferta ou prêmio parece bom demais para ser verdade, provavelmente é um golpe.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="list-bullet">✓</span>
+                            <div>
+                                <strong>Verifique os links:</strong> Examine minuciosamente o endereço dos sites antes de digitar qualquer informação sensível.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="list-bullet">✓</span>
+                            <div>
+                                <strong>Verificação em duas etapas:</strong> Ative essa camada extra de segurança em todas as suas redes sociais e e-mails.
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Banner de Atenção Intermediário -->
-        <section class="attention-banner">
-            <div class="banner-container">
-                <div class="banner-icon-alert">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
+        <section id="simulador" class="simulador-section">
+            <div class="container text-center">
+                <div class="section-header">
+                    <h2>Teste Seus Reflexos de Segurança</h2>
+                    <p>Recebeu um link urgente dizendo que sua conta foi bloqueada. O que você faz?</p>
                 </div>
-                <div class="banner-text">
-                    <h2>SEGURANÇA COMEÇA COM <span>ATENÇÃO!</span></h2>
-                    <p>Previna-se. Compartilhe essa informação.</p>
-                </div>
-                <div class="banner-icon-megaphone">
-                    <i class="fa-solid fa-bullhorn"></i>
+                <div class="simulador-box">
+                    <div class="quiz-scenario">
+                        <p><strong>Remetente:</strong> <span class="fake-url">suporte@banc0-urgente-seguro.com</span></p>
+                        <p><strong>Mensagem:</strong> "⚠️ ALERTA: Sua chave Pix será cancelada em 2 horas se você não atualizar seus dados agora! Clique aqui: <span class="fake-link">http://atualizar-pix-agora.net</span>"</p>
+                    </div>
+                    <div class="simulador-actions">
+                        <button class="btn btn-danger id-action-block">Bloquear e Deletar</button>
+                        <button class="btn btn-warning id-action-click">Clicar para Verificar</button>
+                    </div>
+                    <div id="quiz-result" class="quiz-result hidden" role="alert"></div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Rodapé -->
-    <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-column brand-column">
-                <div class="logo font-light">
-                    <i class="fa-solid fa-triangle-exclamation logo-icon"></i>
-                    <div class="logo-text">
-                        <span class="logo-title">ALERTA!</span>
-                        <span class="logo-subtitle">GOLPES VIRTUAIS</span>
-                    </div>
-                </div>
-                <p class="footer-desc">Informação é a melhor forma de prevenção. Fique atento e ajude a proteger mais pessoas.</p>
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="footer-alert">⚠️ SEGURANÇA COMEÇA COM ATENÇÃO!</p>
+            <p>Previna-se contra crimes cibernéticos. Compartilhe essa informação relevante com amigos e familiares.</p>
+            <div class="footer-credits">
+                <p>&copy; 2026 Guia de Sobrevivência Digital. Todos os direitos reservados de forma educativa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
