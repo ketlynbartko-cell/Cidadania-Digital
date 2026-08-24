@@ -1,7 +1,6 @@
 
 🚨 Alerta! — Golpes Virtuais e Segurança Digital
 
-svg
 
 Projeto Escolar Interdisciplinar
 🏫 Escola: Colégio Cívico-Militar D. Pedro I
@@ -10,7 +9,6 @@ Projeto Escolar Interdisciplinar
 
 📌 Sobre o Projeto
 
-svg
 
 Este site foi criado como uma ferramenta educativa e de conscientização sobre segurança digital. O objetivo principal é alertar a população sobre os principais tipos de golpes virtuais, ajudando as pessoas a reconhecer situações suspeitas e a adotar atitudes mais seguras no ambiente digital.
 
@@ -20,18 +18,14 @@ A proposta une os conhecimentos de Cidadania e Civismo, destacando a responsabil
 
 👥 Autores do Projeto
 
-svg
 
 Escola: Colégio Cívico-Militar D. Pedro I
 Turma: 3º Ano
 Alunos integrantes:
-[Nome do Aluno 1]
-[Nome do Aluno 2]
-[Nome do Aluno 3]
-Disciplinas: Cidadania e Civismo | Educação Digital
+Ketlyn Vitoria Bartko
+Disciplinas: Cidadania e Civismo | Matemática II
 🚀 Tecnologias Utilizadas
 
-svg
 
 O projeto foi desenvolvido utilizando tecnologias modernas de desenvolvimento web:
 
@@ -44,7 +38,6 @@ Design Responsivo: Adaptação do site para celulares, tablets e computadores.
 GitHub Pages: Publicação e hospedagem do projeto na internet.
 🎯 Objetivo do Projeto
 
-svg
 
 O principal objetivo é informar e conscientizar os usuários sobre os perigos dos golpes virtuais, incentivando uma postura mais cuidadosa no uso da internet.
 
@@ -52,13 +45,9 @@ Através de informações simples e acessíveis, o projeto busca mostrar que seg
 
 🔐 Segurança Começa com Atenção
 
-svg
 
 Na internet, todo cuidado é importante. Antes de clicar em um link, fornecer informações pessoais ou realizar uma compra, é fundamental verificar a origem e a confiabilidade da mensagem ou do site.
 
 Não clique. Não responda. Verifique. Proteja-se.
 
 Compartilhar conhecimento também é uma forma de prevenção. Ao conhecer os principais golpes virtuais, podemos contribuir para uma internet mais segura, consciente e responsável para todos.
-
-Anúncio
-Anúncios não influenciam as respostas ob
