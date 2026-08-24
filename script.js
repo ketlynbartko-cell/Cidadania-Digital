@@ -1,82 +1,182 @@
----
+"use strict";
 
-### `script.js`
+document.addEventListener("DOMContentLoaded", () => {
 
-```javascript
-document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+    const navLinks = document.querySelectorAll(".main-nav a");
 
-    // ==========================================================================
-    // 1. MENU HAMBÚRGUER MOBILE
-    // ==========================================================================
-    const navToggle = document.querySelector('.mobile-nav-toggle');
-    const navMenu = document.querySelector('.nav');
-    const navLinks = document.querySelectorAll('.nav-link');
 
-    const toggleMenu = () => {
-        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', !isExpanded);
-        navMenu.classList.toggle('is-active');
-    };
+    /*
+     * MENU MOBILE
+     */
 
-    navToggle.addEventListener('click', toggleMenu);
+    menuToggle.addEventListener("click", () => {
 
-    // Fecha o menu móvel imediatamente ao clicar em qualquer link interno
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('is-active')) {
-                navToggle.setAttribute('aria-expanded', 'false');
-                navMenu.classList.remove('is-active');
-            }
-        });
-    });
+        const isOpen = mainNav.classList.toggle("active");
 
-    // ==========================================================================
-    // 2. ROLAGEM SUAVE COM OFFSET FIXO DO HEADER
-    // ==========================================================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
 
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                const headerOffset = document.querySelector('.header').offsetHeight;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // ==========================================================================
-    // 3. INTERATIVIDADE DO SIMULADOR DE SEGURANÇA (QUIZ)
-    // ==========================================================================
-    const btnBlock = document.querySelector('.id-action-block');
-    const btnClick = document.querySelector('.id-action-click');
-    const resultBox = document.getElementById('quiz-result');
-
-    const showResult = (type, message) => {
-        resultBox.className = `quiz-result ${type}`;
-        resultBox.textContent = message;
-        resultBox.setAttribute('aria-live', 'polite');
-    };
-
-    btnBlock.addEventListener('click', () => {
-        showResult(
-            'success', 
-            'Perfeito! Você identificou os sinais: remetente com erro ortográfico (banc0), senso de urgência artificial e link suspeito. Essa é a conduta correta!'
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Fechar menu" : "Abrir menu"
         );
+
     });
 
-    btnClick.addEventListener('click', () => {
-        showResult(
-            'error', 
-            'Cuidado! Ao clicar, você seria redirecionado para uma página clonada projetada para roubar sua senha bancária ou baixar um vírus no seu aparelho.'
-        );
+
+    /*
+     * FECHAR MENU AO CLICAR EM UM LINK
+     */
+
+    navLinks.forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            mainNav.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Abrir menu"
+            );
+
+        });
+
     });
+
+
+    /*
+     * SCROLL SUAVE COM COMPENSAÇÃO DO HEADER
+     */
+
+    navLinks.forEach((link) => {
+
+        link.addEventListener("click", (event) => {
+
+            const targetId = link.getAttribute("href");
+
+            if (!targetId || !targetId.startsWith("#")) {
+                return;
+            }
+
+            const target = document.querySelector(targetId);
+
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+
+            const header = document.querySelector(".site-header");
+
+            const headerHeight = header
+                ? header.offsetHeight
+                : 0;
+
+            const targetPosition =
+                target.getBoundingClientRect().top +
+                window.scrollY -
+                headerHeight;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth"
+            });
+
+        });
+
+    });
+
+
+    /*
+     * ANIMAÇÃO DE ENTRADA DOS CARDS
+     */
+
+    const animatedElements = document.querySelectorAll(
+        ".info-card, .protection-item, .doubt-section, .final-alert"
+    );
+
+
+    const observer = new IntersectionObserver(
+        (entries, observerInstance) => {
+
+            entries.forEach((entry) => {
+
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.add("visible");
+
+                observerInstance.unobserve(entry.target);
+
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+
+    animatedElements.forEach((element) => {
+
+        element.style.opacity = "0";
+        element.style.transform = "translateY(20px)";
+        element.style.transition =
+            "opacity 0.6s ease, transform 0.6s ease";
+
+        observer.observe(element);
+
+    });
+
+
+    /*
+     * CLASSE VISÍVEL
+     */
+
+    const animationStyle = document.createElement("style");
+
+    animationStyle.textContent = `
+        .info-card.visible,
+        .protection-item.visible,
+        .doubt-section.visible,
+        .final-alert.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    `;
+
+    document.head.appendChild(animationStyle);
+
+
+    /*
+     * FECHAR MENU AO REDIMENSIONAR PARA DESKTOP
+     */
+
+    window.addEventListener("resize", () => {
+
+        if (window.innerWidth > 650) {
+
+            mainNav.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Abrir menu"
+            );
+
+        }
+
+    });
+
 });
